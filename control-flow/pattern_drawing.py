@@ -1,10 +1,6 @@
-user_size=int(input("Enter the  size of the pattern:"))
-rows=0
-while rows<=user_size:
-    column=0
-    for column in range(user_size):
-         print("*" , end="")
-         column+=1
-        
+size = int(input("Enter the size of the pattern: "))
+
+for i in range(size):
+    for j in range(size):
+        print("* ", end="")
     print()
-    rows+=1
