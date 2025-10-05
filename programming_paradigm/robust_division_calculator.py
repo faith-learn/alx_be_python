@@ -8,12 +8,14 @@ def safe_divide(numerator, denominator):
 
         # Try performing division
         result = num / den
-        return f"Result: {result}"
+        
+        # CORRECTED: Changed the format string to match the expected output
+        return f"The result of the division is {result}"
 
     except ZeroDivisionError:
         return "Error: Cannot divide by zero."
     except ValueError:
-        # Corrected error message to match the expected output exactly.
+        # Previous correction for the numeric error message
         return "Error: Please enter numeric values only."
 
 # Example usage
