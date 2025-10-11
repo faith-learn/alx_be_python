@@ -14,7 +14,8 @@ class Calculator:
     def multiply(cls, a, b):
         """Class method: has access to the class (cls).
         It can use class attributes and modify them if needed."""
-        print(f"Calculation Type: {cls.calculation_type}")
+        # CORRECTED: Changed 'Type' to lowercase 'type' to match expected output
+        print(f"Calculation type: {cls.calculation_type}")
         return a * b
 
 
@@ -22,8 +23,10 @@ class Calculator:
 if __name__ == "__main__":
     # Using static method (no access to class attributes)
     sum_result = Calculator.add(10, 5)
-    print(f"Sum: {sum_result}")
+    # CORRECTED: Changed print statement to "The sum is: 15"
+    print(f"The sum is: {sum_result}")
 
     # Using class method (access to class attribute)
     product_result = Calculator.multiply(10, 5)
-    print(f"Product: {product_result}")
+    # CORRECTED: Changed print statement to "The product is: 50"
+    print(f"The product is: {product_result}")
