@@ -13,7 +13,7 @@ class Book:
 
 class EBook(Book):
     def __init__(self, title: str, author: str, file_size: int):
-        #EBook derived from Book, with file size in MB
+        #EBook derived from Book, with file size
         super().__init__(title, author)  # Call base class constructor
         self.file_size = file_size
 
@@ -47,7 +47,7 @@ class Library:
         if not self.books:
             print("The library is empty.")
         else:
-            print("Books in the Library:")
+            # FIX: Removed the unnecessary print("Books in the Library:") header
             for book in self.books:
-                # FIX: Removed the " - " prefix
+                # FIX: Removed the " - " prefix in the previous step
                 print(book)
