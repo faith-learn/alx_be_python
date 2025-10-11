@@ -7,7 +7,8 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f"'{self.title}' by {self.author}"
+        # FIX: Added "Book: " prefix and removed quotes around {self.title}
+        return f"Book: {self.title} by {self.author}"
 
 
 class EBook(Book):
@@ -17,7 +18,8 @@ class EBook(Book):
         self.file_size = file_size
 
     def __str__(self):
-        return f"EBook: '{self.title}' by {self.author}, File size: {self.file_size}MB"
+        # FIX: Removed quotes, changed "File size" to "File Size", and "MB" to "KB"
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 
 class PrintBook(Book):
@@ -27,7 +29,8 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"PrintBook: '{self.title}' by {self.author}, Pages: {self.page_count}"
+        # FIX: Removed quotes and changed "Pages" to "Page Count"
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 
 class Library:
@@ -46,4 +49,5 @@ class Library:
         else:
             print("Books in the Library:")
             for book in self.books:
-                print(" -", book)
+                # FIX: Removed the " - " prefix
+                print(book)
